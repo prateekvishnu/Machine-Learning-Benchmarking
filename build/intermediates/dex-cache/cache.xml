@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/naitikshah/Downloads/MLBenchMarking2/app/src/main/assets/wekaSTRIPPED.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1d553332d3346a8efe1d52000973115cc5ef975d">
+        <dex dex="/Users/naitikshah/Downloads/MLBenchMarking2/app/build/intermediates/pre-dexed/debug/wekaSTRIPPED_bd6d69a189cb7491be8eb30350a457021d4c3a51.jar" />
+    </item>
+
+</items>

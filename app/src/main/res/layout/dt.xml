@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/DTtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10pt"
+        android:text="Please define Parameters for Decision Tree"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DTparameter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/DTtextView"
+        android:layout_marginLeft="20pt"
+        android:layout_marginRight="20pt"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="Instances: "
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+
+    <EditText
+        android:id="@+id/DTparameter1value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/DTDownload"
+        android:layout_below="@+id/DTtextView"
+        android:ems="10"
+        android:hint="Enter Value"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/DTparameter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/DTparameter1"
+        android:layout_marginLeft="20pt"
+        android:layout_marginRight="20pt"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="40dp"
+        android:text="Seed "
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/DTparameter2value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Value"
+        android:layout_alignBaseline="@+id/DTparameter2"
+        android:layout_alignBottom="@+id/DTparameter2"
+        android:layout_alignStart="@+id/DTparameter1value" />
+
+    <TextView
+        android:id="@+id/DTparameter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/DTparameter2"
+        android:layout_marginLeft="20pt"
+        android:layout_marginRight="20pt"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="40dp"
+        android:text="Max Depth"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+
+
+    <EditText
+        android:id="@+id/DTparameter3value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Value"
+        android:layout_alignBaseline="@+id/DTparameter3"
+        android:layout_alignBottom="@+id/DTparameter3"
+        android:layout_alignStart="@+id/DTparameter2value" />
+
+    <Button
+        android:id="@+id/DTTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/DTparameter3"
+        android:layout_below="@+id/DTparameter3value"
+        android:background="@drawable/buttoncolors"
+        android:text="Train"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/DTDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DTparameter3value"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttoncolors"
+        android:text="Download Model"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/DTTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/DTAnswers"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/DTparameter3value"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/buttoncolors"
+        android:text="Test"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/DTAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="26dp"
+        android:maxLines = "20000" android:scrollbars = "vertical"
+        android:text="Decision tree Answers"
+
+        android:layout_below="@+id/DTTrain"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

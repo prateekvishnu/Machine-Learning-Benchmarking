@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+
+
+    android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/SVMtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/SVMParameter1"
+        android:layout_marginTop="14dp"
+        android:text="Please define Parameters for SVM"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="FOLD: "
+    android:textAllCaps="true"
+    android:textColor="@color/colorPrimary"
+    android:layout_marginLeft="20pt"
+    android:layout_marginRight="20pt"
+    android:layout_marginTop="15dp"
+    android:layout_below="@+id/SVMtextView"
+    android:layout_alignParentStart="true"
+    android:layout_marginStart="18dp"
+    android:id="@+id/SVMParameter1"/>
+
+
+<EditText
+    android:id="@+id/SVMParameter1Value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:hint="Enter Value"
+    android:inputType="number"
+    android:layout_alignBaseline="@+id/SVMParameter1"
+    android:layout_alignBottom="@+id/SVMParameter1"
+    android:layout_centerHorizontal="true" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Seed: "
+    android:textAllCaps="true"
+    android:textColor="@color/colorPrimary"
+    android:layout_marginLeft="20pt"
+    android:layout_marginRight="20pt"
+    android:layout_marginTop="40dp"
+    android:layout_below="@+id/SVMParameter1"
+    android:layout_alignParentStart="true"
+    android:layout_marginStart="18dp"
+    android:id="@+id/SVMParameter2"/>
+
+
+    <EditText
+        android:id="@+id/SVMParameter2Value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Value"
+        android:layout_alignBaseline="@+id/SVMParameter2"
+        android:layout_alignBottom="@+id/SVMParameter2"
+        android:layout_alignStart="@+id/SVMParameter1Value" />
+
+    <Button
+        android:id="@+id/SVMTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/SVMParameter2"
+        android:layout_below="@+id/SVMParameter2Value"
+        android:background="@drawable/buttoncolors"
+        android:text="Train"
+        android:textColor="@color/black" />
+
+<Button
+    android:id="@+id/SVMDownload"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Download Model"
+    android:textColor="@color/black"
+    android:background="@drawable/buttoncolors"
+    android:layout_below="@id/SVMParameter2Value"
+    android:layout_centerHorizontal="true" />
+
+<Button
+    android:id="@+id/SVMTest"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Test"
+    android:textColor="@color/black"
+    android:background="@drawable/buttoncolors"
+    android:layout_below="@id/SVMParameter2Value"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="14dp"
+    android:layout_above="@+id/SVMAnswers" />
+
+<TextView
+    android:id="@+id/SVMAnswers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="26dp"
+    android:text="SVM Answers"
+    android:maxLines = "20000" android:scrollbars = "vertical"
+    android:layout_below="@+id/SVMTrain"
+    android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

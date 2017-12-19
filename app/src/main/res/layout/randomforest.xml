@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/RFtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Please define Parameters for Random Forest"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/RFParameter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/RFtextView"
+        android:layout_marginLeft="20pt"
+        android:layout_marginRight="20pt"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:inputType="number"
+        android:text="ITERATIONS: "
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+
+    <EditText
+        android:id="@+id/RFParameter1value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/RFParameter2value"
+        android:inputType="number"
+        android:layout_below="@+id/RFtextView"
+        android:ems="10"
+        android:hint="Enter Value"
+        android:numeric="integer" />
+
+    <TextView
+        android:id="@+id/RFParameter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/RFParameter2value"
+        android:layout_alignBottom="@+id/RFParameter2value"
+        android:layout_alignStart="@+id/RFParameter1"
+        android:text="Attributes:"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/RFParameter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/RFparameter3value"
+        android:layout_alignBottom="@+id/RFparameter3value"
+        android:layout_alignStart="@+id/RFParameter2"
+        android:text="Seed:"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/RFParameter2value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/RFparameter3value"
+        android:inputType="number"
+        android:layout_below="@+id/RFParameter1value"
+        android:ems="10"
+        android:hint="Enter Value"
+        android:numeric="integer" />
+
+    <EditText
+        android:id="@+id/RFparameter3value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/RFDownload"
+        android:layout_below="@+id/RFParameter2value"
+        android:ems="10"
+        android:hint="Enter Value"
+        android:inputType="number"
+        android:numeric="integer" />
+
+    <Button
+        android:id="@+id/RFTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/RFParameter3"
+        android:layout_below="@+id/RFparameter3value"
+        android:background="@drawable/buttoncolors"
+        android:text="Train"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/RFDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RFAnswers"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttoncolors"
+        android:text="Download Model"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/RFTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RFAnswers"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/RFparameter3value"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/buttoncolors"
+        android:text="Test"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/RFAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="26dp"
+        android:maxLines = "20000" android:scrollbars = "vertical"
+        android:layout_below="@+id/RFTrain"
+        android:text="Random Forest Answers"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

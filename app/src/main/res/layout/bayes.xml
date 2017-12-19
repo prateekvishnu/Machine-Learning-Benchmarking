@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please define Parameters for Naive Bayes"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/BtextView"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/BParameter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BtextView"
+        android:layout_marginLeft="20pt"
+        android:layout_marginRight="20pt"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="15dp"
+        android:text="Fold: "
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+
+    <EditText
+        android:id="@+id/BParameter1value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BtextView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Enter Value" />
+
+    <TextView
+        android:id="@+id/BParameter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BParameter1"
+        android:layout_marginLeft="20pt"
+        android:layout_marginRight="20pt"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="40dp"
+        android:text="Seed:"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary" />
+
+
+    <EditText
+        android:id="@+id/BParameter2value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/BParameter2"
+        android:layout_alignBottom="@+id/BParameter2"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="Enter Value"/>
+
+
+    <Button
+        android:id="@+id/BTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/BParameter2"
+        android:layout_below="@+id/BParameter2value"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/buttoncolors"
+        android:text="Train"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/BDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/BTrain"
+        android:layout_alignBottom="@+id/BTrain"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buttoncolors"
+        android:text="Download Model"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/BTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/BAnswers"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/buttoncolors"
+        android:text="Test"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/BAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/BDownload"
+        android:maxLines = "20000" android:scrollbars = "vertical"
+        android:layout_centerVertical="true"
+        android:text="Naive Bayes Answers" />
+
+
+</RelativeLayout>
